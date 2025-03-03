@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>صفحة سوداء</title>
+    <style>
+        body {
+            background-color: #000;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-y: auto;
+            flex-direction: column;
+            position: relative;
+            touch-action: pan-x pan-y;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 500px;
+            margin: 20px 0;
+            padding: 20px 0;
+        }
+        
+        /* شعار أعلى الصفحة */
+        .top-logo {
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            transform: translate(0, 0);
+        }
+        
+        .top-logo img {
+            width: 80px;
+            height: 40px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        
+        .logo-text {
+            color: white;
+            font-size: 12px;
+            margin-top: 5px;
+            font-weight: bold;
+        }
+        
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-top: 10px;
+        }
+        
+        .header img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 1px solid white;
+        }
+        
+        .small-text {
+            font-size: 6px;
+            color: white;
+            margin-top: 5px;
+        }
+        
+        .info-container {
+            text-align: center;
+            width: 100%;
+            margin: 20px 0 30px 0;
+        }
+        
+        .responsive-text {
+            width: 80%;
+            max-width: 300px;
+            background-color: #0B182C;
+            padding: 10px;
+            border-radius: 20px;
+            margin: 0 auto;
+            border: 2px solid darkgray;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        
+        .info-text {
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            animation: colorChange 1s infinite alternate;
+        }
+        
+        @keyframes colorChange {
+            0% { color: darkorange; }
+            100% { color: white; }
+        }
+        
+        .circle-container {
+            width: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin: 20px 0;
+            animation: rotate 10s linear infinite;
+        }
+        
+        .circle-container img {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+        
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        /* المستطيلات في الأسفل */
+        .bottom-rectangles {
+            width: 80%;
+            max-width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .rect {
+            background-color: #0B182C;
+            padding: 8px 15px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid #333;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .rect:hover {
+            background-color: #162942;
+        }
+        
+        .rect-text {
+            color: white;
+            font-size: 12px;
+        }
+        
+        .rect-icon {
+            width: 20px;
+            height: 20px;
+        }
+        
+        /* تنسيق للرابط */
+        a.rect-link {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        @media (max-width: 768px) {
+            .info-text {
+                font-size: 12px;
+            }
+            .responsive-text {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- شعار أعلى الصفحة -->
+        <div class="top-logo">
+            <img src="https://i.postimg.cc/1X6byTZ6/IMG.jpg" alt="شعار">
+            <div class="logo-text">Amjad</div>
+        </div>
+        
+        <div class="header">
+            <img src="https://i.postimg.cc/DyZrGGNJ/Photoroom-1.png" alt="صورة دائرية">
+            <div class="small-text">ᴹᴿ𓄂ᎯᎷᎶᎯᎠ𓀚𓆃</div>
+        </div>
+        
+        <div class="info-container">
+            <div class="responsive-text">
+                <p class="info-text" id="info-text">ᴹᴿ𓄂ᎯᎷᎶᎯᎠ𓀚𓆃 <p>
+                    
+                </p>لتفعيل الوكالات وارسال ترحيبات ومتابعة شكاوي العملاء</p>
+            </div>
+        </div>
+        
+        <div class="circle-container">
+            <img src="https://i.postimg.cc/LXP1DBpv/Picsart-25-03-03-02-04-06-757.png" style="top: 0; left: 50%; transform: translateX(-50%);">
+            <img src="https://i.postimg.cc/VvcbVrsw/Picsart-25-03-03-02-04-56-790.png" style="bottom: 0; left: 50%; transform: translateX(-50%);">
+            <img src="https://i.postimg.cc/k5zSWYkB/Picsart-25-03-03-02-05-24-894.png" style="left: 0; top: 50%; transform: translateY(-50%);">
+            <img src="https://i.postimg.cc/7Lf7GrtF/Picsart-25-03-03-02-05-42-225.png" style="right: 0; top: 50%; transform: translateY(-50%);">
+        </div>
+        
+        <!-- المستطيلات في الأسفل -->
+        <div class="bottom-rectangles">
+            <div class="rect">
+                <a href="https://wa.me/201006447401?text=اهلا%20امجد" class="rect-link" target="_blank">
+                    <span class="rect-text">وتساب</span>
+                    <img src="https://i.postimg.cc/CLScZdG9/images-1.jpg" alt="واتساب" class="rect-icon">
+                </a>
+            </div>
+            <div class="rect">
+                <span class="rect-text">ID 175345</span>
+                <img src="https://i.postimg.cc/hv77C8Rp/IMG-20250303-WA0008.jpg" alt="Party" class="rect-icon">
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // JavaScript to dynamically create and style the text
+        const infoText = document.getElementById('info-text');
+        infoText.innerHTML = 'ᴹᴿ𓄂ᎯᎷᎶᎯᎠ𓀚𓆃
+        <p>لتفعيل الوكالات وارسال ترحيبات ومتابعة شكاوي العملاء</p>';
+        
+        // منع تكبير أو تصغير الشاشة بأصابع متعددة
+        document.addEventListener('gesturestart', function (e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('gesturechange', function (e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('gestureend', function (e) {
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>
